@@ -1,0 +1,15 @@
+<h1>Task No.<%= @task.id %> Detail</h1>
+<table>
+    <tr>
+        <td>ID</td>
+        <td><%= @task.id %></td>
+    </tr>
+    <tr>
+        <td>Task</td>
+        <td><%= @task.content %></td>
+    </tr>
+</table>
+
+<%= link_to 'Back to All Tasks', tasks_path %>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Delete', task_path(@task), method: :delete, data: {confirm: 'Can I delete it?'} %>

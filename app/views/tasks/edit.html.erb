@@ -1,0 +1,9 @@
+<h1>Task No.<%= @task.id %> Edit</h1>
+
+<%= form_with(model: @task, local: true) do |f| %>
+  <%= f.label 'Task', :content %>
+  <%= f.text_field :content %>
+  <%= f.submit 'submit' %>
+<% end %>
+
+<%= link_to 'Back to All Tasks', tasks_path %>
